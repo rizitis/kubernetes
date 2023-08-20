@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ # GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+ # Anagnostakis Ioannis GR 8/2023
+
 if [ $EUID != 0 ]; then
     sudo "$0" "$@"
     exit $?

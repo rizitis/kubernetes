@@ -19,12 +19,12 @@ VBOX="VirtualBox-7.0.10-158379-Linux_amd64.run"
 
 mkdir -p $BULDIR
 cd $BULDIR || exit 1
-wget -c -b wget.log $URL1 $URL2 $URL3 
+wget -c  $URL1 $URL2 $URL3 
 wait
 install minikube-linux-amd64 /usr/local/bin/minikube
 tar -xvf $SLACK.tar.gz
 cd $SLACK || exit 2
-wget -c -b wget2.log $URL4
+wget -c  $URL4
 chmod +x $SLACK.SlackBuild
 sed -i 's/1.23.0/1.28.0/g' $SLACK.SlackBuild || exit 3
 bash $SLACK.SlackBuild

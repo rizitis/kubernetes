@@ -30,7 +30,7 @@ sed -i 's/1.23.0/1.28.0/g' $SLACK.SlackBuild || exit 3
 bash $SLACK.SlackBuild
 installpkg /tmp/$PACKG*.tgz || exit 4
 wait
-bash "$VBOX"
+bash "$BULDIR"/"$VBOX" install
 wait
 echo ""
 echo "RUN SCRIPT run-kubernetes.sh NOW AS USER"
